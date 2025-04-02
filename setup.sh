@@ -26,7 +26,7 @@ fi
 
 # Install required packages with paru
 echo -e "${GREEN}Installing required packages with paru...${NC}"
-paru -S --noconfirm qt5-graphicaleffects qt5-quickcontrols2 qt5-svg python311 cmake pyqt5 openrgb zen-browser-bin discord visual-studio-code-bin spotify-launcher nemo nemo-fileroller hyprpaper eog vlc
+paru -S --noconfirm qt5-graphicaleffects qt5-quickcontrols2 qt5-svg fuse2 python311 cmake pyqt5 openrgb zen-browser-bin discord visual-studio-code-bin spotify-launcher nemo nemo-fileroller hyprpaper eog vlc
 echo -e "${GREEN}Required packages have been installed.${NC}"
 
 # Clone the dotfiles repository
