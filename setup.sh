@@ -127,6 +127,19 @@ else
     echo -e "${RED}OpenRGB folder does not exist in the repository.${NC}"
 fi
 
+# Move the input-remapper-2 folder to the .config directory
+INPUT_REMAPPER_SRC="$DOTFILES_DIR/input-remapper-2"
+INPUT_REMAPPER_DEST="$HOME/.config/input-remapper-2"
+
+if [ -d "$INPUT_REMAPPER_SRC" ]; then
+    echo -e "${GREEN}Copying input-remapper-2 folder to .config...${NC}"
+    mkdir -p "$INPUT_REMAPPER_DEST"
+    cp -r "$INPUT_REMAPPER_SRC/"* "$INPUT_REMAPPER_DEST/"
+    echo -e "${GREEN}input-remapper-2 folder has been updated.${NC}"
+else
+    echo -e "${RED}input-remapper-2 folder does not exist in the repository.${NC}"
+fi
+
 # Move the settings.json file to the .config/Code/User directory
 SETTINGS_SRC="$DOTFILES_DIR/settings.json"
 SETTINGS_DEST="$HOME/.config/Code/User/settings.json"
