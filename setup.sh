@@ -178,6 +178,11 @@ else
     echo -e "${RED}sugar-candy theme folder does not exist in the repository.${NC}"
 fi
 
+# Configure Nemo to use Alacritty as default Terminal
+echo -e "${GREEN}Configuring Nemo to use Alacritty as default Terminal...${NC}"
+gsettings set org.cinnamon.desktop.default-applications.terminal exec 'alacritty'
+gsettings set org.cinnamon.desktop.default-applications.terminal exec-arg '-e'
+
 # Cleanup the dotfiles repository
 echo -e "${GREEN}Cleaning up the dotfiles repository...${NC}"
 rm -rf "$DOTFILES_DIR"
