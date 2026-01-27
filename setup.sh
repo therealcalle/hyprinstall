@@ -114,6 +114,19 @@ else
     echo -e "${RED}waybar folder does not exist in the repository.${NC}"
 fi
 
+# Move the gtk-3.0 folder to the .config directory
+GTK3_SRC="$DOTFILES_DIR/gtk-3.0"
+GTK3_DEST="$HOME/.config/gtk-3.0"
+
+if [ -d "$GTK3_SRC" ]; then
+    echo -e "${GREEN}Copying gtk-3.0 folder to .config...${NC}"
+    mkdir -p "$GTK3_DEST"
+    cp -r "$GTK3_SRC/"* "$GTK3_DEST/"
+    echo -e "${GREEN}gtk-3.0 folder has been updated.${NC}"
+else
+    echo -e "${RED}gtk-3.0 folder does not exist in the repository.${NC}"
+fi
+
 # Move the OpenRGB folder to the .config directory
 OPENRGB_SRC="$DOTFILES_DIR/OpenRGB"
 OPENRGB_DEST="$HOME/.config/OpenRGB"
