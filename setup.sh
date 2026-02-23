@@ -101,12 +101,12 @@ if [ -d "$WAYBAR_SRC" ]; then
     cp -r "$WAYBAR_SRC/"* "$WAYBAR_DEST/"
     echo -e "${GREEN}waybar folder has been updated.${NC}"
 
-    # Make cpun.sh and gpu.sh executable
+    # Make module scripts executable
     MODULES_DIR="$WAYBAR_DEST/modules"
     if [ -d "$MODULES_DIR" ]; then
-        echo -e "${GREEN}Making cpun.sh and gpu.sh executable...${NC}"
-        chmod +x "$MODULES_DIR/cpun.sh" "$MODULES_DIR/gpu.sh"
-        echo -e "${GREEN}cpun.sh and gpu.sh are now executable.${NC}"
+        echo -e "${GREEN}Making cpu.sh, gpu.sh and power.sh executable...${NC}"
+        chmod +x "$MODULES_DIR/cpu.sh" "$MODULES_DIR/gpu.sh" "$MODULES_DIR/power.sh"
+        echo -e "${GREEN}cpu.sh, gpu.sh and power.sh are now executable.${NC}"
     else
         echo -e "${RED}Modules folder does not exist in waybar directory.${NC}"
     fi
