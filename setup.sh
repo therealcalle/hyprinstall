@@ -65,6 +65,19 @@ else
     echo -e "${RED}fastfetch folder does not exist in the repository.${NC}"
 fi
 
+# Move the alacritty folder to the .config directory
+ALACRITTY_SRC="$DOTFILES_DIR/alacritty"
+ALACRITTY_DEST="$HOME/.config/alacritty"
+
+if [ -d "$ALACRITTY_SRC" ]; then
+    echo -e "${GREEN}Copying alacritty folder to .config...${NC}"
+    mkdir -p "$ALACRITTY_DEST"
+    cp -r "$ALACRITTY_SRC/"* "$ALACRITTY_DEST/"
+    echo -e "${GREEN}alacritty folder has been updated.${NC}"
+else
+    echo -e "${RED}alacritty folder does not exist in the repository.${NC}"
+fi
+
 # Move the hypr folder to the .config directory
 HYPR_SRC="$DOTFILES_DIR/hypr"
 HYPR_DEST="$HOME/.config/hypr"
