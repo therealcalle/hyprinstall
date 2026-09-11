@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# Check out Quickshell as replacement for Waybar!
+
 # Exit immediately if a command exits with a non-zero status
 set -e
 
